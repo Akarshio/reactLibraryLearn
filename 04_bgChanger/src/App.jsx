@@ -16,10 +16,10 @@ function App() {
                         Red
               </button>
                   <button  className=" outline-none px-4  rounded-full text-white bg-blue-700" onClick={() => setColor('blue')}  style={{backgroundColor: 'blue'}}>
-                      Red
+                      Blue
                   </button>
                   <button  className=" outline-none px-4  rounded-full text-white bg-black" onClick={() => setColor('black')}  style={{backgroundColor: 'black'}}>
-                      Red
+                      Black
                   </button>
 
 
