@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useRef, useState} from "react";
 
 
 function App() {
@@ -34,23 +34,51 @@ function App() {
 
     // useEffect ---> Component render hone ke baad automatic code run karta hai
 
-    const [ item , setItem] = useState([]);
-    const [quantity , setQuantity] = useState(0);
+   //  const [ item , setItem] = useState([]);
+   //  const [quantity , setQuantity] = useState(0);
+   //
+   //
+   //      useEffect( () => {
+   //          setItem([ "Pizza"])
+   //
+   //      } ,[  quantity ])
+   //
+   //  const quantityUpdate = () => {
+   //          setQuantity( prev => prev + 1)
+   // }
+
+    // useCallback --> dubara function create hone se bachata hai , while rerendering
 
 
-        useEffect( () => {
-            setItem([ "Pizza"])
+    const infoRef = useRef(null);
 
-        } ,[  quantity ])
+    const handleEvent = () => {
+        infoRef.current.focus();
+        infoRef.current.select();
+        navigator.clipboard.writeText(infoRef.current.value);
+        alert("Text copied")
+    }
 
-    const quantityUpdate = () => {
-            setQuantity( prev => prev + 1)
-   }
+
+
+
 
   return (
     <>
-        <h1> my score is {item} & quantity {quantity}</h1>
-        <button onClick={ quantityUpdate }> Button </button>
+        <input
+            placeholder=" write what you want to copy "
+            ref={infoRef} />
+
+
+        <button onClick={handleEvent}>
+            Copy
+        </button>
+
+
+        {/*<input ref={ infoRef}/>*/}
+        {/*<h1> my score is {count} & quantity {count}</h1>*/}
+        {/*<button onClick={ handleEvent }> Button </button>*/}
+        {/*<button onClick={ incrementValue }> Button </button>*/}
 
     </>
   )
