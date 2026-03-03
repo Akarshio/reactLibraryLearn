@@ -26,7 +26,7 @@ import React, { useState } from 'react';
                     type="text"
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
-                    placeholder="Enter alphabets..."
+                    placeholder="Enter alphabets"
                 />
             </div>
 
