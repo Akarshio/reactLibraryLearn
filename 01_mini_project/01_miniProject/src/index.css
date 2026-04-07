@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* ===================== NAVBAR ===================== */
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 60px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #e8000d;
+}
+
+.btn button {
+    background-color: #e8000d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 26px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.btn button:hover {
+    background-color: #c0000b;
+}
+
+/* ===================== HERO SECTION ===================== */
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 60px;
+    padding-top: 80px; /* offset for fixed nav */
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Big heading */
+.hero-content h1 {
+    font-size: clamp(52px, 7vw, 96px);
+    font-weight: 900;
+    line-height: 1.0;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    max-width: 580px;
+    margin-bottom: 24px;
+}
+
+/* Description text */
+.hero-content p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Buttons */
+.hero-btn {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.hero-btn button:first-child {
+    background-color: #e8000d;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.hero-btn button:first-child:hover {
+    background-color: #c0000b;
+}
+
+.hero-btn button:last-child {
+    background-color: transparent;
+    color: #111111;
+    border: 2px solid #111111;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.hero-btn button:last-child:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Available On icons */
+.hero-icon {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.available-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333333;
+    text-transform: none !important;
+    letter-spacing: 0.3px;
+    margin-bottom: 0 !important;
+    max-width: none !important;
+}
+
+.hero-icon img {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Shoe image - positioned absolutely to the right */
+.hero-img {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55%;
+    max-width: 680px;
+    pointer-events: none;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 30px 60px rgba(200, 0, 0, 0.15));
+}
